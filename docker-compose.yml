@@ -18,19 +18,11 @@ services:
       - DRONE_USER_CREATE=username:${ADMIN_USERNAME},admin:true
       - DRONE_USER_FILTER=${ADMIN_USERNAME}
       - DRONE_REPOSITORY_FILTER=${REPOSITORY_FILTER}
-      - DRONE_LOGS_DEBUG=true
     networks:
       - traefik
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - drone:/data
-    ports:
-      - 8080:80
-    logging:
-      driver: "json-file"
-      options:
-        max-file: "10"
-        max-size: "200k"
     labels:
       traefik.enable: true
       traefik.frontend.rule: "Host:${DOMAIN}"
