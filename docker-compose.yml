@@ -10,7 +10,7 @@ services:
       - DRONE_GITHUB_CLIENT_SECRET=${GITHUB_CLIENT_SECRET}
       - DRONE_RUNNER_CAPACITY=${RUNNER_CAPACITY}
       - DRONE_SERVER_HOST=${DOMAIN}
-      - DRONE_SERVER_PROTO=http
+      - DRONE_SERVER_PROTO=https
       - DRONE_TLS_AUTOCERT=false
       - DRONE_DATABASE_DRIVER=postgres
       - DRONE_DATABASE_DATASOURCE=postgres://drone:${DB_PASSWORD}@postgres:5432/drone?sslmode=disable
