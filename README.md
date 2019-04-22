@@ -1,4 +1,4 @@
-# Docker Compose Drone
+# Traefik Drone
 
 A Docker Compose configuration to run [Drone](https://drone.io/) behind a [Traefik](https://traefik.io/) reverse proxy.
 
